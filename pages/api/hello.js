@@ -9,8 +9,20 @@
 // }
 
 // Same as Above
+// export default function hello(req, res) {
+//   if (req.method === 'POST' || req.method === 'GET') {
+//     res.status(200).json({ name: 'Falcon Wolf' })
+//   }
+// }
+
 export default function hello(req, res) {
   if (req.method === 'POST' || req.method === 'GET') {
-    res.status(200).json({ name: 'Falcon Wolf' })
+    res.status(200).json({ "replies": [
+      {
+        "message": "This some Date 1"
+      },{
+        "message": "This some Date 1"
+      },
+    ] })
   }
 }
