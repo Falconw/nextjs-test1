@@ -16,13 +16,18 @@
 // }
 
 export default function hello(req, res) {
-  if (req.method === 'POST' || req.method === 'GET') {
-    res.status(200).json({ "replies": [
-      {
-        "message": "This some Data 1"
-      },{
-        "message": "This some Data 2"
-      },
-    ] })
+  console.log(req);
+
+  if (req.method === "POST" || req.method === "GET") {
+    res.status(200).json({
+      replies: [
+        {
+          message: "This some Data 1",
+        },
+        {
+          message: "This some Data 2",
+        },
+      ],
+    });
   }
 }
