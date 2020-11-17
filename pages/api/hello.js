@@ -16,7 +16,8 @@
 // }
 
 export default function hello(req, res) {
-  console.log(req);
+  console.log('Request', req);
+  console.log('Response:  ', res)
 
   if (req.method === "POST" || req.method === "GET") {
     res.status(200).json({
